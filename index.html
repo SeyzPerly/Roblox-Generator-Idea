@@ -15,6 +15,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            flex-direction: column;
         }
 
         .container {
@@ -59,6 +60,18 @@
             font-weight: bold;
             color: #ffffff;
         }
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            background-color: #000000;
+            color: #ffcc00;
+            font-size: 0.9rem;
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
@@ -67,6 +80,10 @@
         <p>Click the button to generate a unique idea for your next Roblox game!</p>
         <button onclick="generateIdea()">Generate Idea</button>
         <p class="idea" id="game-idea">Your game idea will appear here...</p>
+    </div>
+
+    <div class="footer">
+        By Melouxis (roblox)
     </div>
 
     <script>
@@ -122,10 +139,20 @@
             "Build a magical school management simulator."
         ];
 
+        let previousIdea = '';
+
         function generateIdea() {
-            const randomIndex = Math.floor(Math.random() * gameIdeas.length);
+            let randomIndex;
+            let newIdea;
+
+            do {
+                randomIndex = Math.floor(Math.random() * gameIdeas.length);
+                newIdea = gameIdeas[randomIndex];
+            } while (newIdea === previousIdea);
+
             const ideaElement = document.getElementById("game-idea");
-            ideaElement.textContent = gameIdeas[randomIndex];
+            ideaElement.textContent = newIdea;
+            previousIdea = newIdea; // Store the latest idea to avoid duplicates
         }
     </script>
 </body>
