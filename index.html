@@ -1,1 +1,132 @@
-# Roblox-Generator-Idea
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Game Idea Generator</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background: #1e1e2f;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+            max-width: 600px;
+            width: 90%;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #ffcc00;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1rem;
+            margin: 15px 0;
+        }
+
+        button {
+            background: #ffcc00;
+            border: none;
+            color: #1e1e2f;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #e6b800;
+        }
+
+        .idea {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Roblox Game Idea Generator</h1>
+        <p>Click the button to generate a unique idea for your next Roblox game!</p>
+        <button onclick="generateIdea()">Generate Idea</button>
+        <p class="idea" id="game-idea">Your game idea will appear here...</p>
+    </div>
+
+    <script>
+        const gameIdeas = [
+            "Create a futuristic space station simulator where players build and manage their own station.",
+            "Design a multiplayer treasure hunt game with randomized maps and puzzles.",
+            "Build a zombie survival game with day and night cycles.",
+            "Create a parkour racing game set in a cyberpunk city.",
+            "Make a tycoon game where players manage a dragon breeding farm.",
+            "Develop a cooking simulator where players compete to create crazy dishes.",
+            "Create a fantasy RPG where players explore dungeons and fight bosses.",
+            "Design a racing game with hovercrafts and gravity-defying tracks.",
+            "Build a horror escape game in a haunted mansion.",
+            "Create a battle royale game with shrinking toxic zones.",
+            "Make an open-world sandbox game where players can build and destroy.",
+            "Develop a game where players run a magical potion shop.",
+            "Design an underwater exploration game with hidden treasures and dangers.",
+            "Create a medieval castle defense game with strategic upgrades.",
+            "Build a tycoon game about managing a futuristic city.",
+            "Make a multiplayer fishing competition game.",
+            "Design a fantasy kingdom management simulator.",
+            "Create a post-apocalyptic survival adventure.",
+            "Develop a detective mystery-solving game.",
+            "Make a game where players tame, train, and battle mythical creatures.",
+            "Build a carnival-themed mini-game collection.",
+            "Create a time travel adventure game with puzzles across eras.",
+            "Design a haunted forest exploration game.",
+            "Make a racing game with procedurally generated tracks.",
+            "Develop a pet adoption and care simulator.",
+            "Create a skydiving battle royale game.",
+            "Build a tycoon game about running a space mining operation.",
+            "Make a multiplayer hide-and-seek game with traps.",
+            "Create a trivia quiz game with interactive visuals.",
+            "Design a VR-inspired sword-fighting simulator.",
+            "Build a game where players manage a pirate ship crew.",
+            "Make a sports competition simulator with wacky mechanics.",
+            "Create an alien invasion defense game.",
+            "Design a dungeon crawler with endless levels.",
+            "Build a weather disaster survival simulator.",
+            "Create a sandbox building game with magic spells.",
+            "Make a game about managing a robotics factory.",
+            "Develop a farming simulator with alien crops.",
+            "Create a multiplayer obstacle course game with challenges.",
+            "Design a city builder game with random events.",
+            "Make a jungle exploration game with hidden artifacts.",
+            "Build a battle simulator with toy soldiers.",
+            "Create a superhero battle arena game.",
+            "Design a cooking competition with bizarre ingredients.",
+            "Make an adventure game set on a sinking ship.",
+            "Create a medieval role-playing game with kingdoms.",
+            "Design a racing game set in outer space.",
+            "Develop a trivia-based survival game.",
+            "Build a magical school management simulator."
+        ];
+
+        function generateIdea() {
+            const randomIndex = Math.floor(Math.random() * gameIdeas.length);
+            const ideaElement = document.getElementById("game-idea");
+            ideaElement.textContent = gameIdeas[randomIndex];
+        }
+    </script>
+</body>
+</html>
